@@ -48,8 +48,6 @@ class Song
     self.all.sort {|s, t| s.name <=> t.name}
   end
 
-  alias_method :create_from_filename, :new_from_filename
-
   def self.new_from_filename(file)
     song_data = file.strip.split('-')
     song_title = song_data[1].strip!.chomp!('.mp3')
